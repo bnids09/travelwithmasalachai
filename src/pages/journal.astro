@@ -1,0 +1,193 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Travel Journal | Travel With Masala Chai"
+  description="Explore our travel journals, destinations and real-world travel experiences."
+>
+  <section class="journal-page">
+
+    <p class="eyebrow">
+      TRAVEL JOURNAL
+    </p>
+
+    <h1>
+      Journeys worth remembering.
+    </h1>
+
+    <p class="intro">
+      Real trips, places we explored, things we discovered and the details
+      that actually help when planning a journey.
+    </p>
+
+    <div class="destinations">
+
+      <article>
+        <span>ASIA</span>
+
+        <h2>Japan</h2>
+
+        <p>
+          Tokyo, Mt. Fuji, Sapporo and more.
+        </p>
+
+        <a href="#">
+          Explore Japan →
+        </a>
+      </article>
+
+      <article>
+        <span>MIDDLE EAST</span>
+
+        <h2>Oman</h2>
+
+        <p>
+          Deserts, mountains and road trips.
+        </p>
+
+        <a href="#">
+          Explore Oman →
+        </a>
+      </article>
+
+      <article>
+        <span>ASIA</span>
+
+        <h2>South Korea</h2>
+
+        <p>
+          Seoul, autumn landscapes and journeys beyond the city.
+        </p>
+
+        <a href="#">
+          Explore Korea →
+        </a>
+      </article>
+
+    </div>
+
+  </section>
+</BaseLayout>
+
+<style>
+
+  .journal-page {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding:
+      110px 5%
+      140px;
+  }
+
+  .eyebrow {
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+  }
+
+  h1 {
+    max-width: 900px;
+
+    font-size:
+      clamp(
+        48px,
+        7vw,
+        90px
+      );
+
+    line-height: 0.95;
+
+    margin:
+      25px 0
+      35px;
+  }
+
+  .intro {
+    max-width: 650px;
+
+    font-size: 20px;
+
+    line-height: 1.7;
+
+    color: #555;
+  }
+
+  .destinations {
+    display: grid;
+
+    grid-template-columns:
+      repeat(
+        3,
+        1fr
+      );
+
+    gap: 25px;
+
+    margin-top: 80px;
+  }
+
+  article {
+    padding: 40px;
+
+    min-height: 280px;
+
+    background: white;
+
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  article span {
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #777;
+  }
+
+  article h2 {
+    font-size: 34px;
+
+    margin:
+      25px 0
+      12px;
+  }
+
+  article p {
+    color: #555;
+
+    line-height: 1.6;
+  }
+
+  article a {
+    margin-top: auto;
+
+    font-weight: 700;
+
+    text-decoration: none;
+  }
+
+  article a:hover {
+    text-decoration: underline;
+  }
+
+  @media (
+    max-width: 750px
+  ) {
+
+    .destinations {
+      grid-template-columns:
+        1fr;
+    }
+
+  }
+
+</style>

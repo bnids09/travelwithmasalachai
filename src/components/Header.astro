@@ -1,0 +1,160 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<header class="site-header">
+
+  <a href="/" class="logo">
+    <span>Travel With Masala Chai</span>
+    <span class="cup">☕</span>
+  </a>
+
+  <nav>
+    <a class:list={{ active: currentPath === "/" }} href="/">
+      Home
+    </a>
+
+    <a
+      class:list={{ active: currentPath.startsWith("/journal") }}
+      href="/journal"
+    >
+      Journal
+    </a>
+
+    <a
+      class:list={{ active: currentPath.startsWith("/blog") }}
+      href="/blog"
+    >
+      Blog
+    </a>
+
+    <a
+      class:list={{ active: currentPath.startsWith("/about") }}
+      href="/about"
+    >
+      About
+    </a>
+  </nav>
+
+</header>
+
+<style>
+
+  .site-header {
+    height: 70px;
+
+    padding: 0 5.5%;
+
+    background: #f8f7f3;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 100;
+  }
+
+  .logo {
+    color: #8B4A3C;
+
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+  }
+
+  .logo span:first-child {
+    font-family:
+      "Brush Script MT",
+      "Segoe Script",
+      cursive;
+
+    font-size: 27px;
+
+    font-weight: 600;
+  }
+
+  .cup {
+    font-family: Arial, sans-serif;
+
+    font-size: 22px;
+  }
+
+  nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 34px;
+  }
+
+  nav a {
+    color: #172536;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    position: relative;
+
+    padding: 8px 0;
+  }
+
+  nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #172536;
+
+    transition: width 0.25s ease;
+  }
+
+  nav a:hover::after,
+  nav a.active::after {
+    width: 100%;
+  }
+
+  @media (max-width: 700px) {
+
+    .site-header {
+      height: auto;
+
+      padding:
+        20px 5%;
+
+      flex-direction: column;
+
+      align-items: flex-start;
+
+      gap: 18px;
+    }
+
+    .logo span:first-child {
+      font-size: 24px;
+    }
+
+    nav {
+      gap: 22px;
+
+      width: 100%;
+
+      justify-content: space-between;
+    }
+
+    nav a {
+      font-size: 15px;
+    }
+
+  }
+
+</style>

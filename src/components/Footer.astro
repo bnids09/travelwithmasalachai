@@ -1,0 +1,50 @@
+<footer class="site-footer">
+  <div>
+    <h2>Travel With Masala Chai</h2>
+
+    <p>
+      Travel stories, experiences and practical guides from around the world.
+    </p>
+  </div>
+
+  <p class="copyright">
+    © {new Date().getFullYear()} Travel With Masala Chai
+  </p>
+</footer>
+
+<style>
+  .site-footer {
+    background: #171717;
+    color: white;
+
+    padding: 60px 5% 35px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: flex-end;
+  }
+
+  h2 {
+    margin: 0 0 12px;
+    font-size: 24px;
+  }
+
+  p {
+    margin: 0;
+    max-width: 500px;
+    line-height: 1.6;
+    color: #cfcfcf;
+  }
+
+  .copyright {
+    font-size: 14px;
+  }
+
+  @media (max-width: 700px) {
+    .site-footer {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>

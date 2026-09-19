@@ -1,0 +1,678 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Travel With Masala Chai | Travel Stories & Experiences"
+  description="Travel stories, experiences, photographs and practical travel guides from Travel With Masala Chai."
+>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+      <p class="eyebrow">
+        TRAVEL • STORIES • EXPERIENCES
+      </p>
+
+      <h1>
+        Stories from the road,
+        one journey at a time.
+      </h1>
+
+      <p class="hero-description">
+        Real journeys, family adventures, beautiful places
+        and the practical details that help you travel better.
+      </p>
+
+      <a href="/journal" class="hero-button">
+        Explore my journeys
+        <span>→</span>
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- DESTINATIONS -->
+
+  <section class="destinations">
+
+    <div class="section-heading">
+
+      <p class="eyebrow dark">
+        DESTINATIONS
+      </p>
+
+      <h2>
+        Where I've been
+      </h2>
+
+    </div>
+
+
+    <div class="destination-grid">
+
+
+      <!-- JAPAN -->
+
+      <article class="destination-card">
+
+        <div class="destination-image japan-image"></div>
+
+        <div class="destination-content">
+
+          <h3>Japan</h3>
+
+          <p>
+            Cities, mountains, autumn colours
+            and unforgettable journeys.
+          </p>
+
+          <a href="/journal">
+            Explore Japan
+            <span>→</span>
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- OMAN -->
+
+      <article class="destination-card">
+
+        <div class="destination-image oman-image"></div>
+
+        <div class="destination-content">
+
+          <h3>Oman</h3>
+
+          <p>
+            Deserts, mountains, road trips and
+            places worth discovering.
+          </p>
+
+          <a href="/journal">
+            Explore Oman
+            <span>→</span>
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- SOUTH KOREA -->
+
+      <article class="destination-card">
+
+        <div class="destination-image korea-image"></div>
+
+        <div class="destination-content">
+
+          <h3>South Korea</h3>
+
+          <p>
+            Seoul, autumn foliage, mountains
+            and family-friendly adventures.
+          </p>
+
+          <a href="/journal">
+            Explore Korea
+            <span>→</span>
+
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- LATEST STORIES -->
+
+  <section class="latest">
+
+    <div class="latest-heading">
+
+      <div>
+
+        <p class="eyebrow dark">
+          FROM THE JOURNAL
+        </p>
+
+        <h2>
+          Latest stories
+        </h2>
+
+      </div>
+
+      <a href="/blog">
+        View all posts
+        <span>→</span>
+      </a>
+
+    </div>
+
+
+    <div class="story-placeholder">
+
+      <p>
+        Your travel stories will appear here.
+      </p>
+
+    </div>
+
+  </section>
+
+</BaseLayout>
+
+
+<style>
+
+  /* =========================
+     HERO
+  ========================= */
+
+  .hero {
+
+    min-height: 650px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background-image:
+      url("/images/home/hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+  }
+
+
+  .hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(5, 18, 28, 0.72) 0%,
+        rgba(5, 18, 28, 0.42) 42%,
+        rgba(5, 18, 28, 0.05) 100%
+      );
+
+  }
+
+
+  .hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1450px;
+
+    margin: auto;
+
+    padding:
+      100px 7%;
+
+    color: white;
+
+  }
+
+
+  .eyebrow {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+  }
+
+
+  .hero h1 {
+
+    max-width: 760px;
+
+    margin:
+      25px 0
+      25px;
+
+    font-family:
+      Georgia,
+      "Times New Roman",
+      serif;
+
+    font-size:
+      clamp(
+        55px,
+        6.5vw,
+        96px
+      );
+
+    line-height: 0.98;
+
+    letter-spacing: -2px;
+
+  }
+
+
+  .hero-description {
+
+    max-width: 600px;
+
+    margin-bottom: 35px;
+
+    font-size: 19px;
+
+    line-height: 1.55;
+
+  }
+
+
+  .hero-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding:
+      15px 24px;
+
+    background: white;
+
+    color: #172536;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition:
+      transform 0.2s ease,
+      background 0.2s ease;
+
+  }
+
+
+  .hero-button:hover {
+
+    transform:
+      translateY(-2px);
+
+    background: #f1eee7;
+
+  }
+
+
+  .hero-button span {
+
+    font-size: 20px;
+
+  }
+
+
+  /* =========================
+     DESTINATIONS
+  ========================= */
+
+  .destinations {
+
+    max-width: 1290px;
+
+    margin: auto;
+
+    padding:
+      75px 5%
+      80px;
+
+  }
+
+
+  .eyebrow.dark {
+
+    color: #172536;
+
+  }
+
+
+  .section-heading h2,
+  .latest-heading h2 {
+
+    margin:
+      8px 0
+      35px;
+
+    font-family:
+      Georgia,
+      "Times New Roman",
+      serif;
+
+    font-size:
+      clamp(
+        42px,
+        5vw,
+        64px
+      );
+
+    line-height: 1;
+
+    color: #172536;
+
+    letter-spacing: -1px;
+
+  }
+
+
+  .destination-grid {
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(
+        3,
+        1fr
+      );
+
+    gap: 28px;
+
+  }
+
+
+  .destination-card {
+
+    background: #fff;
+
+    border:
+      1px solid #e7e3db;
+
+    overflow: hidden;
+
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+
+  }
+
+
+  .destination-card:hover {
+
+    transform:
+      translateY(-5px);
+
+    box-shadow:
+      0 15px 35px
+      rgba(0,0,0,0.08);
+
+  }
+
+
+  .destination-image {
+
+    height: 230px;
+
+    background-size: cover;
+
+    background-position: center;
+
+  }
+
+
+  /*
+    Temporary images.
+
+    We'll replace these with
+    your actual photographs.
+  */
+
+  .japan-image {
+
+    background-image:
+      url("https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=1200&q=80");
+
+  }
+
+
+  .oman-image {
+
+    background-image:
+      url("https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=1200&q=80");
+
+  }
+
+
+  .korea-image {
+
+    background-image:
+      url("https://images.unsplash.com/photo-1538485399081-7c8971b2d8d6?auto=format&fit=crop&w=1200&q=80");
+
+  }
+
+
+  .destination-content {
+
+    padding:
+      24px 25px
+      27px;
+
+  }
+
+
+  .destination-content h3 {
+
+    margin:
+      0 0
+      8px;
+
+    font-family:
+      Georgia,
+      "Times New Roman",
+      serif;
+
+    font-size: 30px;
+
+    color: #172536;
+
+  }
+
+
+  .destination-content p {
+
+    min-height: 52px;
+
+    margin:
+      0 0
+      20px;
+
+    color: #53606c;
+
+    font-size: 16px;
+
+    line-height: 1.55;
+
+  }
+
+
+  .destination-content a {
+
+    color: #172536;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+  }
+
+
+  .destination-content a span {
+
+    margin-left: 8px;
+
+    font-size: 18px;
+
+  }
+
+
+  /* =========================
+     LATEST STORIES
+  ========================= */
+
+  .latest {
+
+    max-width: 1290px;
+
+    margin: auto;
+
+    padding:
+      20px 5%
+      120px;
+
+  }
+
+
+  .latest-heading {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    border-bottom:
+      1px solid #dcd8d0;
+
+  }
+
+
+  .latest-heading h2 {
+
+    margin-bottom: 20px;
+
+  }
+
+
+  .latest-heading > a {
+
+    margin-bottom: 25px;
+
+    color: #172536;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+  }
+
+
+  .latest-heading > a span {
+
+    margin-left: 8px;
+
+  }
+
+
+  .story-placeholder {
+
+    padding:
+      60px 20px;
+
+    text-align: center;
+
+    color: #777;
+
+  }
+
+
+  /* =========================
+     MOBILE
+  ========================= */
+
+  @media (max-width: 800px) {
+
+    .hero {
+
+      min-height: 620px;
+
+    }
+
+
+    .hero-content {
+
+      padding:
+        80px 7%;
+
+    }
+
+
+    .hero h1 {
+
+      font-size:
+        clamp(
+          48px,
+          12vw,
+          70px
+        );
+
+    }
+
+
+    .hero-description {
+
+      font-size: 17px;
+
+    }
+
+
+    .destination-grid {
+
+      grid-template-columns: 1fr;
+
+    }
+
+
+    .destination-image {
+
+      height: 260px;
+
+    }
+
+
+    .latest-heading {
+
+      align-items: flex-start;
+
+      flex-direction: column;
+
+    }
+
+  }
+
+</style>

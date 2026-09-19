@@ -1,0 +1,351 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="About | Travel With Masala Chai"
+  description="About Travel With Masala Chai and the stories behind the journeys."
+>
+
+  <section class="about-page">
+
+    <div class="about-intro">
+
+      <p class="eyebrow">
+        ABOUT
+      </p>
+
+      <h1>
+        Travel, stories and
+        a little masala chai.
+      </h1>
+
+    </div>
+
+
+    <div class="about-content">
+
+      <div class="about-label">
+        <span>THE JOURNAL</span>
+      </div>
+
+      <div class="about-text">
+
+        <p class="lead">
+          Travel With Masala Chai is a personal travel journal built around
+          real experiences, photographs and practical travel information.
+        </p>
+
+        <p>
+          The goal is simple: document the places we visit and share the
+          details that actually help when planning a trip.
+        </p>
+
+        <p>
+         Hey There! A little bit about me, we are Indian couple travelling with our daughter since she was 1 year old.
+          I never knew I love exploring places until we left our home. Why masala chai? because why not??
+          Indian who loves chai and travel know its way to add spice in the life.
+          From destinations and itineraries to food, stays, transport and
+          things we would do differently next time, this is where the journey
+          gets documented.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="about-divider"></div>
+
+
+    <div class="about-bottom">
+
+      <div>
+        <span class="small-heading">WHAT YOU'LL FIND HERE</span>
+      </div>
+
+      <div class="features">
+
+        <div>
+          <h2>Real journeys</h2>
+          <p>
+            Personal experiences from places we've actually visited.
+          </p>
+        </div>
+
+        <div>
+          <h2>Practical details</h2>
+          <p>
+            Transport, stays, costs, itineraries and useful planning notes.
+          </p>
+        </div>
+
+        <div>
+          <h2>Travel stories</h2>
+          <p>
+            The photographs, moments and little discoveries behind each trip.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</BaseLayout>
+
+
+<style>
+
+  .about-page {
+
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    padding:
+      90px 6%
+      120px;
+
+  }
+
+
+  /* TOP */
+
+  .about-intro {
+
+    max-width: 900px;
+
+  }
+
+
+  .eyebrow {
+
+    margin: 0 0 25px;
+
+    color: #24384b;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+  }
+
+
+  h1 {
+
+    max-width: 850px;
+
+    margin: 0;
+
+    color: #172536;
+
+    font-family:
+      Georgia,
+      "Times New Roman",
+      serif;
+
+    font-size:
+      clamp(
+        48px,
+        6vw,
+        78px
+      );
+
+    line-height: 1.02;
+
+    letter-spacing: -1.5px;
+
+  }
+
+
+  /* CONTENT */
+
+  .about-content {
+
+    display: grid;
+
+    grid-template-columns:
+      180px
+      minmax(0, 650px);
+
+    gap: 60px;
+
+    margin-top: 75px;
+
+  }
+
+
+  .about-label {
+
+    padding-top: 8px;
+
+  }
+
+
+  .about-label span,
+  .small-heading {
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+
+    color: #7a7f82;
+
+  }
+
+
+  .about-text {
+
+    font-size: 19px;
+
+    line-height: 1.75;
+
+    color: #53606c;
+
+  }
+
+
+  .about-text p {
+
+    margin:
+      0 0
+      30px;
+
+  }
+
+
+  .about-text .lead {
+
+    margin-bottom: 35px;
+
+    color: #24384b;
+
+    font-size: 24px;
+
+    line-height: 1.55;
+
+  }
+
+
+  /* DIVIDER */
+
+  .about-divider {
+
+    height: 1px;
+
+    margin:
+      80px 0
+      55px;
+
+    background: #ddd9d1;
+
+  }
+
+
+  /* BOTTOM */
+
+  .about-bottom {
+
+    display: grid;
+
+    grid-template-columns:
+      180px
+      1fr;
+
+    gap: 60px;
+
+  }
+
+
+  .features {
+
+    display: grid;
+
+    grid-template-columns:
+      repeat(3, 1fr);
+
+    gap: 35px;
+
+  }
+
+
+  .features h2 {
+
+    margin:
+      0 0
+      12px;
+
+    color: #172536;
+
+    font-family:
+      Georgia,
+      "Times New Roman",
+      serif;
+
+    font-size: 24px;
+
+  }
+
+
+  .features p {
+
+    margin: 0;
+
+    color: #69737b;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+  }
+
+
+  /* MOBILE */
+
+  @media (max-width: 750px) {
+
+    .about-page {
+
+      padding:
+        70px 7%
+        90px;
+
+    }
+
+
+    h1 {
+
+      font-size: 48px;
+
+    }
+
+
+    .about-content,
+    .about-bottom {
+
+      grid-template-columns: 1fr;
+
+      gap: 25px;
+
+      margin-top: 55px;
+
+    }
+
+
+    .features {
+
+      grid-template-columns: 1fr;
+
+      gap: 35px;
+
+    }
+
+  }
+
+</style>
