@@ -18,8 +18,6 @@ const coverImage = `${base}images/japan/cover.jpg`;
   style={`background-image: url('${coverImage}')`}
 ></div>
 
-    <div class="hero-image"></div>
-
     <div class="hero-overlay"></div>
 
     <div class="hero-content">
@@ -86,8 +84,8 @@ const coverImage = `${base}images/japan/cover.jpg`;
 
     <div class="destination-layout">
 
-      <div class="photo-placeholder">
-        <span>Your Tokyo photo</span>
+      <div class="destination-photo">
+        <img src={`${base}images/japan/shibuya-crossing.jpg`} alt="View over Shibuya Crossing in Tokyo" loading="lazy" />
       </div>
 
       <div class="story">
@@ -132,8 +130,8 @@ const coverImage = `${base}images/japan/cover.jpg`;
 
     <div class="destination-layout">
 
-      <div class="photo-placeholder">
-        <span>Your Mt. Fuji photo</span>
+      <div class="destination-photo">
+        <img src={`${base}images/japan/lake-kawaguchiko-mount-fuji.jpg`} alt="Mount Fuji viewed from Lake Kawaguchiko" loading="lazy" />
       </div>
 
       <div class="story">
@@ -253,12 +251,20 @@ const coverImage = `${base}images/japan/cover.jpg`;
 
     </div>
 
-    <div class="gallery-placeholder">
-
-      <p>
-        Your Japan photographs will appear here.
-      </p>
-
+    <div class="gallery-grid">
+      <img class="wide" src={`${base}images/japan/teamlab-family.jpg`} alt="Family moment at teamLab in Tokyo" loading="lazy" />
+      <img src={`${base}images/japan/tokyo-autumn-leaf.jpg`} alt="Autumn leaf held on a Tokyo street" loading="lazy" />
+      <img src={`${base}images/japan/mt-fuji-bicycles.jpg`} alt="Mount Fuji above bicycles and a station car park" loading="lazy" />
+      <img src={`${base}images/japan/mt-fuji-forest-road.jpg`} alt="Forest road near Mount Fuji" loading="lazy" />
+      <img src={`${base}images/japan/mt-fuji-ice-cream.jpg`} alt="Ice cream with Mount Fuji in the background" loading="lazy" />
+      <img src={`${base}images/japan/oshino-hakkai-mount-fuji.jpg`} alt="Oshino Hakkai with Mount Fuji beyond the ponds" loading="lazy" />
+      <img src={`${base}images/japan/fuji-safari-park.jpg`} alt="Mount Fuji behind Fuji Safari Park" loading="lazy" />
+      <img src={`${base}images/japan/fuji-safari-wallaby.jpg`} alt="Child meeting a wallaby at Fuji Safari Park" loading="lazy" />
+      <img src={`${base}images/japan/fujiq-highland-view.jpg`} alt="View towards Fuji-Q Highland" loading="lazy" />
+      <img src={`${base}images/japan/lake-kawaguchiko-path.jpg`} alt="Path through pink grass near Lake Kawaguchiko" loading="lazy" />
+      <img src={`${base}images/japan/usagi-shrine-wishes.jpg`} alt="Wooden wish plaques at Usagi Shrine" loading="lazy" />
+      <img src={`${base}images/japan/otsuki-map.jpg`} alt="Child looking at a sightseeing map in Otsuki" loading="lazy" />
+      <img src={`${base}images/japan/mt-fuji-rental-car.jpg`} alt="Small rental car near Mount Fuji" loading="lazy" />
     </div>
 
   </section>
@@ -709,6 +715,36 @@ const coverImage = `${base}images/japan/cover.jpg`;
   }
 
 
+  .destination-photo {
+    min-height: 360px;
+    overflow: hidden;
+  }
+
+  .destination-photo img {
+    width: 100%;
+    min-height: 360px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gallery-grid {
+    max-width: 1180px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+
+  .gallery-grid img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+  }
+
+  .gallery-grid .wide {
+    grid-column: span 2;
+  }
+
   /* TIPS */
 
   .tips-section {
@@ -780,6 +816,15 @@ const coverImage = `${base}images/japan/cover.jpg`;
       min-height: 300px;
     }
 
+    .destination-photo,
+    .destination-photo img {
+      min-height: 300px;
+    }
+
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
     .details-grid {
       grid-template-columns:
         repeat(2, 1fr);
@@ -788,6 +833,14 @@ const coverImage = `${base}images/japan/cover.jpg`;
   }
 
   @media (max-width: 550px) {
+
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .gallery-grid .wide {
+      grid-column: auto;
+    }
 
     .details-grid {
       grid-template-columns: 1fr;
