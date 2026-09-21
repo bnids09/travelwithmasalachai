@@ -1,5 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const base = `${import.meta.env.BASE_URL}/`;
 ---
 
 <BaseLayout
@@ -32,7 +34,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           Tokyo, Mt. Fuji, Sapporo and more.
         </p>
 
-        <a href="#">
+        <a href={`${base}journal/japan/`}>
           Explore Japan →
         </a>
       </article>
@@ -46,9 +48,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           Deserts, mountains and road trips.
         </p>
 
-        <a href="#">
-          Explore Oman →
-        </a>
+        <span class="coming-soon">Coming soon</span>
       </article>
 
       <article>
@@ -60,9 +60,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           Seoul, autumn landscapes and journeys beyond the city.
         </p>
 
-        <a href="#">
-          Explore Korea →
-        </a>
+        <span class="coming-soon">Coming soon</span>
       </article>
 
     </div>
@@ -177,6 +175,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   article a:hover {
     text-decoration: underline;
+  }
+
+  .coming-soon {
+    margin-top: auto;
+
+    font-weight: 700;
+
+    color: #53606c;
   }
 
   @media (

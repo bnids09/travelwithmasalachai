@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const base = import.meta.env.BASE_URL;
+const base = `${import.meta.env.BASE_URL}/`;
 const heroImage = `${base}images/home/hero.jpg`;
 ---
 
@@ -36,7 +36,7 @@ const heroImage = `${base}images/home/hero.jpg`;
         and the practical details that help you travel better.
       </p>
 
-      <a href="/journal" class="hero-button">
+      <a href={`${base}journal/`} class="hero-button">
         Explore my journeys
         <span>→</span>
       </a>
@@ -81,7 +81,7 @@ const heroImage = `${base}images/home/hero.jpg`;
             and unforgettable journeys.
           </p>
 
-          <a href="/journal">
+          <a href={`${base}journal/japan/`}>
             Explore Japan
             <span>→</span>
           </a>
@@ -106,7 +106,7 @@ const heroImage = `${base}images/home/hero.jpg`;
             places worth discovering.
           </p>
 
-          <a href="/journal">
+          <a href={`${base}journal/`}>
             Explore Oman
             <span>→</span>
           </a>
@@ -131,7 +131,7 @@ const heroImage = `${base}images/home/hero.jpg`;
             and family-friendly adventures.
           </p>
 
-          <a href="/journal">
+          <a href={`${base}journal/`}>
             Explore Korea
             <span>→</span>
 
@@ -165,7 +165,7 @@ const heroImage = `${base}images/home/hero.jpg`;
 
       </div>
 
-      <a href="/blog">
+      <a href={`${base}blog/`}>
         View all posts
         <span>→</span>
       </a>
