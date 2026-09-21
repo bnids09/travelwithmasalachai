@@ -1,5 +1,8 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const base = import.meta.env.BASE_URL;
+const coverImage = `${base}images/japan/cover.jpg`;
 ---
 
 <BaseLayout
@@ -10,6 +13,10 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   <!-- HERO -->
 
   <section class="japan-hero">
+  <div
+  class="hero-image"
+  style={`background-image: url('${coverImage}')`}
+></div>
 
     <div class="hero-image"></div>
 
@@ -293,15 +300,12 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
   }
 
   .hero-image {
-    position: absolute;
-    inset: 0;
-
-    background-image:
-      url("/images/japan/cover.jpg");
-
-    background-size: cover;
-    background-position: center;
-  }
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
   .hero-overlay {
     position: absolute;

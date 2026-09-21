@@ -1,40 +1,41 @@
 ---
 const currentPath = Astro.url.pathname;
+const base = import.meta.env.BASE_URL;
 ---
 
 <header class="site-header">
 
-  <a href="/" class="logo">
+  <a href={base} class="logo">
     <span>Travel With Masala Chai</span>
     <span class="cup">☕</span>
   </a>
 
   <nav>
-    <a class:list={{ active: currentPath === "/" }} href="/">
-      Home
-    </a>
+  <a class:list={{ active: currentPath === base }} href={base}>
+    Home
+  </a>
 
-    <a
-      class:list={{ active: currentPath.startsWith("/journal") }}
-      href="/journal"
-    >
-      Journal
-    </a>
+  <a
+    class:list={{ active: currentPath.startsWith(`${base}journal`) }}
+    href={`${base}journal/`}
+  >
+    Journal
+  </a>
 
-    <a
-      class:list={{ active: currentPath.startsWith("/blog") }}
-      href="/blog"
-    >
-      Blog
-    </a>
+  <a
+    class:list={{ active: currentPath.startsWith(`${base}blog`) }}
+    href={`${base}blog/`}
+  >
+    Blog
+  </a>
 
-    <a
-      class:list={{ active: currentPath.startsWith("/about") }}
-      href="/about"
-    >
-      About
-    </a>
-  </nav>
+  <a
+    class:list={{ active: currentPath.startsWith(`${base}about`) }}
+    href={`${base}about/`}
+  >
+    About
+  </a>
+</nav>
 
 </header>
 
